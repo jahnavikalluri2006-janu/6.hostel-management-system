@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hostel operations dashboard">
+<title>Hostel JK | Operations dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+<div class="app-shell">
+
+<aside class="sidebar">
+<div class="brand"><span class="brand-mark">JK</span><span>Hostel<span class="brand-accent">JK</span></span></div>
+<div class="sidebar-label">Workspace</div>
+
+<nav class="nav-list" aria-label="Primary navigation">
+<button class="nav-item active" data-view="overview"><span class="nav-icon">◫</span> Overview</button>
+<button class="nav-item" data-view="students"><span class="nav-icon">♙</span> Students</button>
+<button class="nav-item" data-view="rooms"><span class="nav-icon">⌂</span> Rooms</button>
+<button class="nav-item" data-view="facilities"><span class="nav-icon">✦</span> Facilities</button>
+<button class="nav-item" data-view="menu"><span class="nav-icon">☷</span> Hostel menu</button>
+<button class="nav-item" data-view="payments"><span class="nav-icon">₹</span> Fee payments</button>
+<button class="nav-item" data-view="reports"><span class="nav-icon">▤</span> Reports</button>
+</nav>
+
+<div class="sidebar-footer">
+<div class="support-dot"></div>
+<div><strong>System online</strong><small>All services operational</small></div>
+</div>
+</aside>
+
+<main class="main-content">
+
+<header class="topbar">
+<div class="mobile-brand"><span class="brand-mark">JK</span> HostelJK</div>
+<div class="breadcrumb">Workspace <span>/</span> <strong id="breadcrumb-label">Overview</strong></div>
+
+<div class="topbar-actions">
+<div class="avatar">JA</div>
+<div class="user-name">Jahnavi<small>Administrator</small></div>
+</div>
+</header>
+
+<div class="content-wrap">
+
+<!-- OVERVIEW -->
+<section class="view active" id="overview-view">
+
+<div class="page-heading">
+<div>
+<p class="eyebrow">Tuesday, September 09, 2026</p>
+<h1>Good morning, Jahnavi <span class="wave">✦</span></h1>
+<p class="heading-copy">Here is what is happening across your hostel today.</p>
+</div>
+
+<button class="primary-button" data-open-modal="student-modal"><span>+</span> Register student</button>
+</div>
+
+<div class="metric-grid">
+
+<article class="metric-card coral">
+<div class="metric-top"><span class="metric-label">Occupancy rate</span><span class="metric-icon">⌂</span></div>
+<div class="metric-value" id="occupancy-value">—</div>
+<div class="metric-meta"><span class="trend up">↑ 4.6%</span><span>vs last month</span></div>
+<div class="progress"><span id="occupancy-progress"></span></div>
+</article>
+
+<article class="metric-card mint">
+<div class="metric-top"><span class="metric-label">Available beds</span><span class="metric-icon">⌑</span></div>
+<div class="metric-value" id="beds-value">—</div>
+<div class="metric-meta"><span class="trend neutral">● Live</span><span>across 3 blocks</span></div>
+<div class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</article>
+
+<article class="metric-card sky">
+<div class="metric-top"><span class="metric-label">Fees collected</span><span class="metric-icon">₹</span></div>
+<div class="metric-value" id="collected-value">—</div>
+<div class="metric-meta"><span class="trend up">↑ 8.2%</span><span>this month</span></div>
+<div class="sparkline"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</article>
+
+<article class="metric-card yellow">
+<div class="metric-top"><span class="metric-label">Pending dues</span><span class="metric-icon">!</span></div>
+<div class="metric-value" id="pending-value">—</div>
+<div class="metric-meta"><span class="trend down">↓ 2.1%</span><span>from last month</span></div>
+<div class="progress warm"><span style="width:34%"></span></div>
+</article>
+
+</div>
+
+<div class="dashboard-grid">
+
+<!-- RECENT ACTIVITY -->
+<section class="panel activity-panel">
+
+<div class="panel-header">
+<div><h2>Recent activity</h2><p>Latest updates from your hostel</p></div>
+<button class="text-button" data-view-target="students">View all <span>→</span></button>
+</div>
+
+<div class="activity-list">
+
+<div class="activity-row">
+<span class="activity-avatar lavender">AM</span>
+<div><strong>Aarav Menon <span>was assigned to</span> Room A-204</strong><small>12 minutes ago · New allocation</small></div>
+<span class="status-pill success">Completed</span>
+</div>
+
+<div class="activity-row">
+<span class="activity-avatar peach">KN</span>
+<div><strong>Payment pending from <span>Meera Nair</span></strong><small>1 hour ago · ₹12,500 via card</small></div>
+<span class="status-pill pending">Pending</span>
+</div>
+
+<div class="activity-row">
+<span class="activity-avatar blue">KS</span>
+<div><strong>New registration: Kabir Shah</strong><small>Yesterday · Awaiting room assignment</small></div>
+<span class="status-pill pending">Review</span>
+</div>
+
+<div class="activity-row">
+<span class="activity-avatar green">DR</span>
+<div><strong>Room C-302 marked as available</strong><small>Yesterday · 1 bed now open</small></div>
+<span class="status-pill info">Updated</span>
+</div>
+
+</div>
+</section>
+
+<!-- ROOM OCCUPANCY -->
+<section class="panel occupancy-panel">
+
+<div class="panel-header">
+<div><h2>Room occupancy</h2><p>Current allocation by block</p></div>
+<button class="more-button">•••</button>
+</div>
+
+<div class="donut-wrap">
+
+<div class="donut">
+<div><strong id="donut-percent">—</strong><small>occupied</small></div>
+</div>
+
+<div class="occupancy-legend">
+
+<div><span class="legend-dot coral-dot"></span><span>Occupied</span><strong id="legend-occupied">—</strong></div>
+<div><span class="legend-dot mint-dot"></span><span>Available</span><strong id="legend-available">—</strong></div>
+<div><span class="legend-dot pale-dot"></span><span>Maintenance</span><strong>0</strong></div>
+
+</div>
+</div>
+
+<div class="block-list">
+
+<div><span>Block A</span><span class="block-track"><i style="width:82%"></i></span><strong>82%</strong></div>
+<div><span>Block B</span><span class="block-track"><i style="width:68%"></i></span><strong>68%</strong></div>
+<div><span>Block C</span><span class="block-track"><i style="width:55%"></i></span><strong>55%</strong></div>
+
+</div>
+</section>
+
+</div>
+</section>
+
+<!-- STUDENTS -->
+<section class="view" id="students-view">
+
+<div class="page-heading compact">
+<div>
+<p class="eyebrow">Directory</p>
+<h1>Students</h1>
+<p class="heading-copy">Manage registrations and room assignments.</p>
+</div>
+<button class="primary-button" data-open-modal="student-modal"><span>+</span> Register student</button>
+</div>
+
+<section class="panel table-panel">
+
+<div class="table-toolbar">
+<div class="search-box"><span>⌕</span><input id="student-search" placeholder="Search students..."></div>
+<button class="filter-button">Filter <span>⌄</span></button>
+</div>
+
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>Student</th>
+<th>Course</th>
+<th>Room</th>
+<th>Status</th>
+<th>Joined</th>
+</tr>
+</thead>
+<tbody id="students-table"></tbody>
+</table>
+</div>
+
+</section>
+</section>
+
+<!-- ROOMS -->
+<section class="view" id="rooms-view">
+
+<div class="page-heading compact">
+<div>
+<p class="eyebrow">Allocation</p>
+<h1>Rooms & beds</h1>
+<p class="heading-copy">Track room capacity across every block.</p>
+</div>
+
+<div class="room-summary">
+<strong id="room-summary">—</strong>
+<span>total beds occupied</span>
+</div>
+</div>
+
+<div class="room-grid" id="rooms-grid"></div>
+
+</section>
+
+<!-- FACILITIES -->
+<section class="view" id="facilities-view">
+
+<div class="page-heading compact">
+<div>
+<p class="eyebrow">Resident services</p>
+<h1>Facilities</h1>
+<p class="heading-copy">Everything residents need for a comfortable stay.</p>
+</div>
+</div>
+
+<div class="facility-grid" id="facilities-grid"></div>
+
+</section>
+
+<!-- PAYMENTS -->
+<section class="view" id="payments-view">
+
+<div class="page-heading compact">
+<div>
+<p class="eyebrow">Finance</p>
+<h1>Fee payments</h1>
+<p class="heading-copy">Keep collections current and follow up on pending dues.</p>
+</div>
+
+<button class="primary-button" data-open-modal="payment-modal"><span>+</span> Record payment</button>
+</div>
+
+<section class="panel table-panel">
+
+<div class="table-toolbar">
+<div><h2>Payment ledger</h2><p>September 2026</p></div>
+<button class="filter-button">Export CSV <span>↓</span></button>
+</div>
+
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>Receipt</th>
+<th>Student</th>
+<th>Room</th>
+<th>Amount</th>
+<th>Date</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody id="payments-table"></tbody>
+</table>
+</div>
+
+</section>
+</section>
+
+<!-- MENU -->
+<section class="view" id="menu-view">
+
+<div class="page-heading compact">
+<div>
+<p class="eyebrow">Dining services</p>
+<h1>Hostel menu</h1>
+<p class="heading-copy">This week's breakfast, lunch, and dinner plan.</p>
+</div>
+<div class="menu-note"><span>●</span> Menu updated for this week</div>
+</div>
+
+<section class="panel table-panel menu-panel">
+<div class="table-toolbar">
+<div><h2>Weekly meal plan</h2><p>Monday to Sunday</p></div>
+</div>
+
+<div class="table-scroll">
+<table class="menu-table">
+<thead>
+<tr><th>Day</th><th>Breakfast</th><th>Lunch</th><th>Dinner</th></tr>
+</thead>
+<tbody id="menu-table"></tbody>
+</table>
+</div>
+</section>
+</section>
+
+<!-- REPORTS -->
+<section class="view" id="reports-view">
+
+<div class="page-heading compact">
+<div>
+<p class="eyebrow">Insights</p>
+<h1>Reports</h1>
+<p class="heading-copy">A quick operational readout for your monthly review.</p>
+</div>
+
+<button class="secondary-button" id="print-report">Print report <span>↗</span></button>
+</div>
+
+<div class="report-grid">
+
+<section class="panel report-card">
+<span class="report-icon coral-bg">◒</span>
+<p>Monthly occupancy</p>
+<strong id="report-occupancy">—</strong>
+<small>Healthy capacity utilization</small>
+</section>
+
+<section class="panel report-card">
+<span class="report-icon mint-bg">₹</span>
+<p>Collection health</p>
+<strong id="report-collection">—</strong>
+<small>Collected vs expected dues</small>
+</section>
+
+<section class="panel report-card wide">
+
+<div>
+<p>Operational notes</p>
+<h2>Things needing attention</h2>
+</div>
+
+<ul>
+<li><span class="note-dot yellow-dot"></span><strong>1 payment</strong> is pending review.</li>
+<li><span class="note-dot mint-dot"></span><strong>4 beds</strong> are available for allocation.</li>
+<li><span class="note-dot coral-dot"></span>Next monthly report is due in <strong>21 days</strong>.</li>
+</ul>
+
+</section>
+</div>
+</section>
+
+</div>
+</main>
+</div>
+
+<!-- STUDENT MODAL -->
+<div class="modal-backdrop" id="student-modal">
+
+<div class="modal">
+
+<button class="modal-close" data-close-modal>×</button>
+
+<p class="eyebrow">New record</p>
+<h2>Register a student</h2>
+
+<form id="student-form">
+
+<label>Full name <input name="name" required placeholder="e.g. Riya Sharma"></label>
+
+<label>Course <input name="course" required placeholder="e.g. B.A. Economics"></label>
+
+<label>Phone number <input name="phone" required placeholder="+91 98765 43210"></label>
+
+<label>Assign room <select name="room" id="room-select" required></select></label>
+
+<button class="primary-button" type="submit">Create registration <span>→</span></button>
+
+</form>
+</div>
+</div>
+
+<!-- PAYMENT MODAL -->
+<div class="modal-backdrop" id="payment-modal">
+
+<div class="modal">
+
+<button class="modal-close" data-close-modal>×</button>
+
+<p class="eyebrow">Finance</p>
+<h2>Record a payment</h2>
+
+<form id="payment-form">
+
+<label>Student <input name="student" required placeholder="Student name"></label>
+
+<label>Room <input name="room" required placeholder="e.g. A-206"></label>
+
+<label>Amount (₹) <input name="amount" required type="number" min="1" placeholder="12500"></label>
+
+<label>Payment method
+<select name="method">
+<option>UPI</option>
+<option>Card</option>
+<option>Bank transfer</option>
+<option>Cash</option>
+</select>
+</label>
+
+<button class="primary-button" type="submit">Save payment <span>→</span></button>
+
+</form>
+</div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>

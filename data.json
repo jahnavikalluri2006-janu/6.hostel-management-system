@@ -1,0 +1,165 @@
+{
+  "students": [
+    {
+      "id": "STU-1042",
+      "name": "jahnavi",
+      "course": "btech",
+      "phone": "6598742365",
+      "room": "A-206",
+      "status": "Active",
+      "joined": "2026-09-13"
+    },
+    {
+      "id": "STU-1042",
+      "name": "Aarav Menon",
+      "course": "B.Tech Computer Science",
+      "room": "A-204",
+      "status": "Active",
+      "phone": "+91 98765 43210",
+      "joined": "2026-06-12"
+    },
+    {
+      "id": "STU-1041",
+      "name": "Meera Nair",
+      "course": "B.Com Finance",
+      "room": "B-108",
+      "status": "Active",
+      "phone": "+91 98220 11982",
+      "joined": "2026-06-10"
+    },
+    {
+      "id": "STU-1039",
+      "name": "Diya Reddy",
+      "course": "M.Sc Data Science",
+      "room": "C-302",
+      "status": "Active",
+      "phone": "+91 98870 40562",
+      "joined": "2026-06-05"
+    },
+    {
+      "id": "STU-1038",
+      "name": "Neil Joseph",
+      "course": "BBA Marketing",
+      "room": "A-112",
+      "status": "Active",
+      "phone": "+91 99011 78012",
+      "joined": "2026-06-02"
+    }
+  ],
+  "rooms": [
+    {
+      "number": "A-204",
+      "type": "Twin sharing",
+      "floor": "2nd floor",
+      "capacity": 2,
+      "occupied": 2,
+      "status": "Full"
+    },
+    {
+      "number": "A-206",
+      "type": "Twin sharing",
+      "floor": "2nd floor",
+      "capacity": 2,
+      "occupied": 2,
+      "status": "Full"
+    },
+    {
+      "number": "A-112",
+      "type": "Twin sharing",
+      "floor": "1st floor",
+      "capacity": 2,
+      "occupied": 1,
+      "status": "Available"
+    },
+    {
+      "number": "B-108",
+      "type": "Single room",
+      "floor": "1st floor",
+      "capacity": 1,
+      "occupied": 1,
+      "status": "Full"
+    },
+    {
+      "number": "C-302",
+      "type": "Twin sharing",
+      "floor": "3rd floor",
+      "capacity": 2,
+      "occupied": 1,
+      "status": "Available"
+    },
+    {
+      "number": "C-305",
+      "type": "Single room",
+      "floor": "3rd floor",
+      "capacity": 1,
+      "occupied": 0,
+      "status": "Available"
+    }
+  ],
+  "payments": [
+    {
+      "id": "PAY-8836",
+      "student": "kabir shah",
+      "room": "A-206",
+      "amount": 12500,
+      "date": "2026-09-13",
+      "status": "Paid",
+      "method": "UPI"
+    },
+    {
+      "id": "PAY-8831",
+      "student": "Aarav Menon",
+      "room": "A-204",
+      "amount": 12500,
+      "date": "2026-09-01",
+      "status": "Paid",
+      "method": "UPI"
+    },
+    {
+      "id": "PAY-8830",
+      "student": "Meera Nair",
+      "room": "B-108",
+      "amount": 12500,
+      "date": "2026-09-01",
+      "status": "Pending",
+      "method": "Card"
+    },
+    {
+      "id": "PAY-8829",
+      "student": "Kabir Shah",
+      "room": "A-206",
+      "amount": 12500,
+      "date": "2026-08-29",
+      "status": "Pending",
+      "method": "—"
+    },
+    {
+      "id": "PAY-8828",
+      "student": "Diya Reddy",
+      "room": "C-302",
+      "amount": 12500,
+      "date": "2026-08-27",
+      "status": "Paid",
+      "method": "Bank transfer"
+    }
+  ],
+  "menu": [
+    { "day": "Monday", "breakfast": "Idli, sambar & chutney", "lunch": "Rice, dal, beans poriyal & curd", "dinner": "Chapati, paneer curry & salad" },
+    { "day": "Tuesday", "breakfast": "Poha, boiled egg & fruit", "lunch": "Jeera rice, rajma & cucumber raita", "dinner": "Vegetable pulao, chicken curry & raita" },
+    { "day": "Wednesday", "breakfast": "Masala dosa & coconut chutney", "lunch": "Rice, sambar, aloo fry & curd", "dinner": "Chapati, mixed veg curry & dal" },
+    { "day": "Thursday", "breakfast": "Upma, sambar & banana", "lunch": "Veg biryani, paneer curry & salad", "dinner": "Rice, rasam, egg curry & beans" },
+    { "day": "Friday", "breakfast": "Poori, potato masala & milk", "lunch": "Rice, dal, cabbage fry & curd", "dinner": "Chapati, chana masala & salad" },
+    { "day": "Saturday", "breakfast": "Aloo paratha, curd & pickle", "lunch": "Rice, dal makhani, veg fry & curd", "dinner": "Tomato rice, chicken curry & salad" },
+    { "day": "Sunday", "breakfast": "Pongal, vada & chutney", "lunch": "Special veg biryani, raita & dessert", "dinner": "Chapati, dal tadka & mixed vegetables" }
+  ],
+  "facilities": [
+    { "name": "Washing machine", "icon": "WM", "description": "Shared laundry machines available on every floor.", "status": "Available" },
+    { "name": "Free Wi-Fi 24/7", "icon": "Wi", "description": "High-speed internet access throughout the hostel.", "status": "Available" },
+    { "name": "24/7 security", "icon": "24", "description": "CCTV monitoring and security support around the clock.", "status": "Available" },
+    { "name": "Common room", "icon": "CR", "description": "A comfortable space for relaxing, studying, and socializing.", "status": "Available" },
+    { "name": "Study area", "icon": "SA", "description": "Quiet, well-lit desks for focused study sessions.", "status": "Available" },
+    { "name": "Power backup", "icon": "PB", "description": "Backup power keeps essential services running during outages.", "status": "Available" },
+    { "name": "Filtered drinking water", "icon": "DW", "description": "Clean drinking water stations on every floor.", "status": "Available" },
+    { "name": "Housekeeping", "icon": "HK", "description": "Regular cleaning of shared spaces and facilities.", "status": "Available" }
+  ]
+}
